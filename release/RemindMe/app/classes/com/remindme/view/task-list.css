@@ -1,0 +1,53 @@
+/* 列表选中行：在 MainView 中为 taskListView 添加了样式类 task-list-view */
+.task-list-view .list-cell:filled:selected,
+.task-list-view .list-cell:filled:selected:focused {
+    -fx-background-color: #cce8ff;
+    -fx-background-insets: 0;
+    -fx-text-fill: black;
+}
+
+/* 选中行内所有文字为黑色（覆盖未选中时的灰色样式类） */
+.task-list-view .list-cell:filled:selected .label,
+.task-list-view .list-cell:filled:selected:focused .label {
+    -fx-text-fill: black;
+}
+
+.task-list-view .list-cell:filled:selected .radio-button,
+.task-list-view .list-cell:filled:selected:focused .radio-button {
+    -fx-text-fill: black;
+}
+
+.task-list-view .list-cell:filled:selected .check-box,
+.task-list-view .list-cell:filled:selected:focused .check-box {
+    -fx-text-fill: black;
+}
+
+/* 去掉选中时可能叠加的边框色（可按需删） */
+.task-list-view .list-cell:filled:selected {
+    -fx-table-cell-border-color: transparent;
+}
+
+/* 鼠标悬停（未选中） */
+.task-list-view .list-cell:filled:hover {
+    -fx-background-color: #f0f0f0;
+}
+
+/* 未选中时的辅助信息颜色（由 MainController 挂样式类） */
+.task-meta-label {
+    -fx-text-fill: #666666;
+    -fx-font-size: 12px;
+}
+
+.task-times-label {
+    -fx-text-fill: #888888;
+    -fx-font-size: 11px;
+}
+
+.task-subtask-label {
+    -fx-text-fill: #333333;
+    -fx-font-size: 12px;
+}
+
+.subtask-strikethrough {
+    -fx-strikethrough: true;
+}
